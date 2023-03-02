@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: customer-service
+
+handlers:
+- url: /
+  static_files: www/index2.html
+  upload: www/index2.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
